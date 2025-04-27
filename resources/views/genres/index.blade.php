@@ -1,10 +1,10 @@
-<!-- resources/views/categories/index.blade.php -->
+<!-- resources/views/genres/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
     <div class="container">
-        <h2>Categories list</h2>
-        <a href="{{ route('categories.create') }}" class="btn btn-primary">Create new category</a>
+        <h2>Genres list</h2>
+        <a href="{{ route('genres.create') }}" class="btn btn-primary">Create new genre</a>
         <table class="table mt-3">
             <thead>
             <tr>
@@ -14,13 +14,13 @@
             </tr>
             </thead>
             <tbody>
-            @foreach ($categories as $category)
+            @foreach ($genres as $genre)
                 <tr>
-                    <td>{{ $category->id }}</td>
-                    <td>{{ $category->name }}</td>
+                    <td>{{ $genre->id }}</td>
+                    <td>{{ $genre->name }}</td>
                     <td>
-                        <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline;">
+                        <a href="{{ route('genres.edit', $genre->id) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('genres.destroy', $genre->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
