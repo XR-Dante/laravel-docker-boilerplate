@@ -9,9 +9,9 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Nom</th>
+                <th>Name</th>
                 <th>URL</th>
-                <th>Amallar</th>
+
             </tr>
             </thead>
             <tbody>

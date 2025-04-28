@@ -25,7 +25,7 @@ class AuthorsController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'url' => 'nullable|url',
+            'url' => 'nullable',
         ]);
 
         Author::create($request->all());
@@ -43,7 +43,7 @@ class AuthorsController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'url' => 'nullable|url',
+            'url' => 'nullable',
         ]);
 
         $author = Author::findOrFail($id);

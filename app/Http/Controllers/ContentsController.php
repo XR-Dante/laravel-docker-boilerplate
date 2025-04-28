@@ -29,7 +29,7 @@ class ContentsController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'url' => 'required|url',
+            'url' => 'required',
             'category_id' => 'required|exists:categories,id',
         ]);
 
@@ -55,7 +55,7 @@ class ContentsController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'url' => 'required|url',
+            'url' => 'required',
             'category_id' => 'required|exists:categories,id',
         ]);
 

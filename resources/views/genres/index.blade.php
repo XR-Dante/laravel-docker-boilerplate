@@ -9,8 +9,7 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Nom</th>
-                <th>Amallar</th>
+                <th>Name</th>
             </tr>
             </thead>
             <tbody>

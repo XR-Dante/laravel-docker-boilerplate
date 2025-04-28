@@ -9,9 +9,8 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>Nom</th>
+                <th>Name</th>
                 <th>URL</th>
-                <th>Amallar</th>
             </tr>
             </thead>
             <tbody>
@@ -20,6 +19,10 @@
                     <td>{{ $content->id }}</td>
                     <td>{{ $content->title }}</td>
                     <td>{{ $content->url }}</td>
+                    <td>{{$content->authors->pluck('name')->join(',')}}</td>
+{{--                    @foreach ($content->authors as $author)--}}
+{{--                        <td>{{ $author->name }}</td>--}}
+{{--                    @endforeach--}}
                     <td>
                         <a href="{{ route('contents.edit', $content->id) }}" class="btn btn-warning">Edit</a>
                         <form action="{{ route('contents.destroy', $content->id) }}" method="POST" style="display:inline;">
