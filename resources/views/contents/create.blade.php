@@ -35,7 +35,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="authors">Mualliflar</label>
+                <label for="authors">Authors</label>
                 <select name="author_ids[]" class="form-control" id="authors" multiple required>
                     @foreach($authors as $author)
                         <option value="{{ $author->id }}">{{ $author->name }}</option>

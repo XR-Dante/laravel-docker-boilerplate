@@ -1,5 +1,5 @@
 <?php
-// app/Http/Controllers/AllController.php
+
 namespace App\Http\Controllers;
 
 use App\Models\Category;
